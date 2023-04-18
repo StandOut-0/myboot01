@@ -5,13 +5,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import lombok.ToString;
+
 @Controller
 public  class DemoController {
 @ResponseBody
   @RequestMapping("/") 
   public String home(){
-    System.out.println("Hello Boot!!");
-    return "Hello Boot!!"; 
+
+	BoardVO boardVO = new BoardVO();
+	boardVO.setTitle("타이틀");
+	
+	System.out.println(boardVO);
+    return boardVO.toString(); 
   }
 
   @RequestMapping("/hello.do")
