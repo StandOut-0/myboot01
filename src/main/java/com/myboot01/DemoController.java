@@ -17,7 +17,7 @@ public  class DemoController {
   @RequestMapping("/hello.do")
   public String hello(Model model){
 	System.out.println("안녕하세요");
-	model.addAttribute("message","hello.jsp입니다.!");
+	model.addAttribute("message","hello.jsp입니다.!_dev");
 	return "hello";
   } 
 }
